@@ -5,12 +5,11 @@ module.exports = {
 
   githubUserName: "aisen60",
 
-  // githubToken: "token d7233989d10c909dbe25dadc10487fdd46aac564",
   githubToken: `token ${[
-    "d7233989d1",
-    "0c909dbe25",
-    "dadc10487f",
-    "dd46aac564",
+    "47df512480",
+    "5f5cb7bf62",
+    "2fb3f491b1",
+    "ff0fab119a",
   ].join("")}`,
 
   blogInfo: {
