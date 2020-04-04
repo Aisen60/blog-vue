@@ -1,12 +1,21 @@
-@import './mixin.scss';
-@import './transition.scss';
+@import "./mixin.scss";
+@import "./transition.scss";
+* {
+  padding: 0;
+  margin: 0;
+}
 
+html {
+  -webkit-filter: grayscale(100%);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(graysale=1);
+}
 body {
   height: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,
+    Microsoft YaHei, Arial, sans-serif;
 }
 
 label {
@@ -56,7 +65,13 @@ div:focus {
   }
 }
 
-// main-container global css
-.app-container {
-  padding: 20px;
+ul,
+li,
+ol {
+  list-style-type: none;
 }
+
+// main-container global css
+// .app-container {
+//   padding: 20px;
+// }
