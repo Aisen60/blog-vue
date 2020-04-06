@@ -3,7 +3,7 @@ import defaultSettings from "@/settings";
 import { MessageBox, Message } from "element-ui";
 
 const service = axios.create({
-  baseURL: process.env.VUE_APP_BASE_API, // url = base url + request url
+  baseURL: "https://api.github.com", // url = base url + request url
   timeout: 60000, // request timeout
 });
 
