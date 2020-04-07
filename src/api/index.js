@@ -49,7 +49,11 @@ export function getIssuesDetails(number) {
  */
 export function getContentContent(path) {
   return request({
-    url: `https://raw.githubusercontent.com/repos/${defaultSettings.githubUserName}/${defaultSettings.githubResop}/master/${path}`,
+    // url: "https://api.github.com/repos/aisen60/blog/contents/timeline.md",
+    url: `/repos/${defaultSettings.githubUserName}/${defaultSettings.githubResop}/contents/${path}`,
     method: "get",
+    headers: {
+      Accept: "application/vnd.github.VERSION.html",
+    },
   });
 }

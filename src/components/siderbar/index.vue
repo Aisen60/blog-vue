@@ -7,8 +7,14 @@
     <ul class="book-siderbar-label" v-loading="loading">
       <li v-for="menu in siderbarList" :key="menu.id">
         <router-link
+          v-if="!menu.target"
           :to="`/issues/${menu.name}`"
           :class="{'active':$route.params.labelType === menu.name}"
+        >{{menu.name}}</router-link>
+        <router-link
+          v-else
+          :to="menu.target"
+          :class="{'active':$route.name === menu.name}"
         >{{menu.name}}</router-link>
       </li>
     </ul>
@@ -31,12 +37,14 @@ export default {
       siderbarCustomList: [
         // {
         //   id: 1585583171335,
-        //   name: "AboutMe"
+        //   name: "AboutMe",
+        //   target: "/AboutMe"
         // },
-        // {
-        //   id: 1585583180245,
-        //   name: "TimeLine"
-        // },
+        {
+          id: 1585583180245,
+          name: "TimeLine",
+          target: "/TimeLine"
+        },
         {
           id: 1585754423724,
           name: "All"
