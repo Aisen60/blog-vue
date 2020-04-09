@@ -6,7 +6,7 @@
       <!-- <div class="webInfo">
         <p>{{setting.blogInfo.creator}}</p>
         <p>{{setting.blogInfo.recordNumber}}</p>
-      </div> -->
+      </div>-->
     </div>
   </div>
 </template>
@@ -36,7 +36,7 @@ export default {
 .book-content {
   flex: 1;
   min-width: 1000px;
-  padding: 20px 20px 0;
+  padding: 20px;
   overflow: auto;
 }
 
