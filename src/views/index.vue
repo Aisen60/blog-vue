@@ -3,10 +3,10 @@
     <siderbar></siderbar>
     <div class="book-content">
       <router-view />
-      <div class="webInfo">
+      <!-- <div class="webInfo">
         <p>{{setting.blogInfo.creator}}</p>
         <p>{{setting.blogInfo.recordNumber}}</p>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
