@@ -21,6 +21,11 @@ export const constantRoutes = [
         path: "/TimeLine",
         name: "TimeLine",
         component: () => import("@/views/timeline")
+      },
+      {
+        path: "AboutMe",
+        name: "AboutMe",
+        component: () => import("@/views/aboutme")
       }
     ]
   },

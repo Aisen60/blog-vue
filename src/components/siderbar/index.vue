@@ -35,16 +35,16 @@ export default {
       siderbarList: [],
 
       siderbarCustomList: [
-        // {
-        //   id: 1585583171335,
-        //   name: "AboutMe",
-        //   target: "/AboutMe"
-        // },
         {
-          id: 1585583180245,
-          name: "TimeLine",
-          target: "/TimeLine"
+          id: 1585583171335,
+          name: "AboutMe",
+          target: "/AboutMe"
         },
+        // {
+        //   id: 1585583180245,
+        //   name: "TimeLine",
+        //   target: "/TimeLine"
+        // },
         {
           id: 1585754423724,
           name: "All"

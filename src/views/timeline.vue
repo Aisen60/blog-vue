@@ -39,7 +39,7 @@ import MarkdownItVue from "markdown-it-vue";
 import { getContentContent } from "@/api/";
 
 export default {
-  name: "posts",
+  name: "timeline",
   components: {
     MarkdownItVue
   },
