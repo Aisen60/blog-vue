@@ -17,11 +17,11 @@ export const constantRoutes = [
         path: "/posts/:id",
         component: () => import("@/views/posts")
       },
-      {
-        path: "/TimeLine",
-        name: "TimeLine",
-        component: () => import("@/views/timeline")
-      },
+      // {
+      //   path: "/TimeLine",
+      //   name: "TimeLine",
+      //   component: () => import("@/views/timeline")
+      // },
       {
         path: "AboutMe",
         name: "AboutMe",
