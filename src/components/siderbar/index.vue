@@ -87,11 +87,14 @@ export default {
     h1 {
       font-size: 16px;
       padding-left: 10px;
+      margin: 0;
     }
   }
 
   .book-siderbar-label {
     padding: 20px;
+    font-size: 16px;
+    list-style-type: none;
     li {
       //   line-height: 30px;
       margin-bottom: 20px;

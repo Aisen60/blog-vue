@@ -1,9 +1,6 @@
 <style lang="scss" scoped>
+@import "../styles/github.css";
 #posts {
-  .posts-title-wrapper {
-    padding-bottom: 20px;
-  }
-
   .posts-title-info {
     display: flex;
     align-items: center;
@@ -36,8 +33,46 @@
       }
     }
   }
+
+  .article-body {
+    // padding: 20px;
+    // word-break: break-word;
+
+    /deep/ h1,
+    /deep/ h2 {
+      padding-bottom: 0.3em;
+      border-bottom: 1px solid #eaecef;
+    }
+
+    p {
+      margin-bottom: 16px;
+    }
+
+    /deep/ ul {
+      list-style-type: disc;
+      margin-top: 0;
+      margin-bottom: 16px;
+      padding-left: 2em;
+    }
+
+    /deep/ li + li {
+      margin-top: 0.25em;
+    }
+
+    /deep/ img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    /deep/ a {
+      color: #0366d6;
+      text-decoration: none;
+    }
+  }
 }
 </style>
+
+
 <template>
   <div id="posts" v-loading="loading">
     <div class="posts-title-wrapper">
@@ -54,21 +89,17 @@
         <span v-if="issuesInfo.updated_at">最后更新时间：{{issuesInfo.updated_at | parseTime}}</span>
       </p>
     </div>
-    <markdown-it-vue class="posts-body-wrapper" :content="issuesInfo.body" />
+    <!-- <markdown-it-vue class="posts-body-wrapper" :content="issuesInfo.body" /> -->
+    <section class="article-body" v-html="issuesInfo.body"></section>
   </div>
 </template>
 
 <script>
-import MarkdownItVue from "markdown-it-vue";
-import "markdown-it-vue/dist/markdown-it-vue.css";
 import { parseTime } from "@/utils/";
-import { getIssuesDetails } from "@/api/";
+import { getIssuesDetails, getIssuesAllContents } from "@/api/";
 
 export default {
   name: "posts",
-  components: {
-    MarkdownItVue
-  },
   data() {
     return {
       loading: true,
@@ -99,10 +130,21 @@ export default {
     getIssuesDetails() {
       this.loading = true;
       let issuesNumber = this.issuesNumber;
-      getIssuesDetails(issuesNumber).then(res => {
-        this.issuesInfo = res;
-        this.loading = false;
-      });
+      getIssuesDetails(issuesNumber)
+        .then(res => {
+          res.body = this.$md.render(res.body);
+          this.issuesInfo = res;
+          this.loading = false;
+          return getIssuesAllContents(issuesNumber);
+        })
+        .then(res => {
+          let body = "";
+          res.map(val => {
+            body += this.$md.render(val.body);
+          });
+          this.issuesInfo.body += body;
+        })
+        .catch(err => {});
     }
   }
 };

@@ -11,7 +11,7 @@
 
   li {
     padding: 10px 0;
-
+    list-style-type: none;
     .mainInfo {
       display: flex;
       align-items: center;

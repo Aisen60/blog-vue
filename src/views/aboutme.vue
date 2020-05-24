@@ -21,6 +21,10 @@
     }
 
     .about-container {
+      font-size: 16px;
+    }
+
+    .about-container {
       padding: 20px;
 
       .user-profile {
@@ -106,6 +110,7 @@
       border-bottom: 1px solid #e6ebf5;
       display: flex;
       li {
+        list-style-type: none;
         padding-right: 30px;
         font-weight: 500;
         cursor: pointer;
@@ -140,6 +145,10 @@
         line-height: 25px;
         font-size: 16px;
         font-weight: 400;
+        list-style-type: none;
+        li {
+          list-style-type: none;
+        }
 
         a {
           color: #0366d6;
@@ -259,8 +268,7 @@ export default {
       .then(res => {
         this.userInfoContent = res;
       })
-      .catch(err => {
-      });
+      .catch(err => {});
   }
 };
 </script>

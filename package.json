@@ -17,13 +17,11 @@
   "dependencies": {
     "axios": "0.18.1",
     "element-ui": "2.13.0",
-    "markdown-it-vue": "^1.0.11",
-    "normalize.css": "7.0.0",
+    "highlight.js": "^10.0.3",
+    "markdown-it": "^11.0.0",
     "nprogress": "0.2.0",
-    "path-to-regexp": "2.4.0",
     "vue": "2.6.10",
-    "vue-router": "3.0.6",
-    "vuex": "3.1.0"
+    "vue-router": "3.0.6"
   },
   "devDependencies": {
     "@babel/core": "7.0.0",
@@ -42,6 +40,7 @@
     "eslint": "5.15.3",
     "eslint-plugin-vue": "5.2.2",
     "html-webpack-plugin": "3.2.0",
+    "markdown-it-style": "^1.0.0",
     "mockjs": "1.0.1-beta3",
     "node-sass": "^4.9.0",
     "runjs": "^4.3.2",
