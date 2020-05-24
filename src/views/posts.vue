@@ -89,7 +89,6 @@
         <span v-if="issuesInfo.updated_at">最后更新时间：{{issuesInfo.updated_at | parseTime}}</span>
       </p>
     </div>
-    <!-- <markdown-it-vue class="posts-body-wrapper" :content="issuesInfo.body" /> -->
     <section class="article-body" v-html="issuesInfo.body"></section>
   </div>
 </template>

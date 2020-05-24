@@ -35,14 +35,11 @@
 </template>
 
 <script>
-import MarkdownItVue from "markdown-it-vue";
 import { getContentContent } from "@/api/";
 
 export default {
   name: "timeline",
-  components: {
-    MarkdownItVue
-  },
+
   data() {
     return {
       content: "",

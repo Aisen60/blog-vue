@@ -225,13 +225,9 @@
 </template>
 
 <script>
-import MarkdownItVue from "markdown-it-vue";
 import { getUserInfo, getContentContent } from "@/api/";
 export default {
   name: "aboutme",
-  components: {
-    MarkdownItVue
-  },
   data() {
     return {
       userInfo: {},
