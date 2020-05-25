@@ -49,7 +49,7 @@
     }
 
     /deep/ ul {
-      list-style-type: disc;
+      // list-style-type: disc;
       margin-top: 0;
       margin-bottom: 16px;
       padding-left: 2em;
